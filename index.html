@@ -2,13 +2,124 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto de Medição e Dashboard</title>
+    <title>Projeto de Medição</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Projeto de Medição e Dashboard</h1>
-    <p>Protótipo de medição(sensor+microcontrolador) integrado a uma API e painel web </p> 
-    <P>coleta, armazenamento e análise de dados de consumo de energia e variáveis contextuais</p>  
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>⚡Protótipo<br>de Medição</h2>
+        <ul>
+            <li class="active">Visão Geral</li>
+            <li>Dados de Consumo</li>
+            <li>Análises</li>
+            <li>Regras e Alertas</li>
+            <li>Dispositivos</li>
+            <li>API</li>
+        </ul>
+    </aside>
+
+    <!-- Conteúdo -->
+    <main class="main">
+
+        <!-- Topo -->
+        <header class="top">
+            <h1>Projeto de Medição e Dashboard</h1>
+            <div class="status">🟢 Sistema Online</div>
+        </header>
+
+        <!-- Cards -->
+        <section class="cards">
+            <div class="card">
+                <h3>Consumo Total</h3>
+                <p class="big">247,3 kwh</p>
+                <span class="green">↓ 12,5%</span>
+            </div>
+
+            <div class="card">
+                <h3>Potência Média</h3>
+                <p class="big">312 w</p>
+                <span>Pico: 1.247 w</span>
+            </div>
+
+            <div class="card">
+                <h3>Horário de Pico</h3>
+                <p class="big">14h - 16</p>
+                <span>Média: 0,85 kwh</span>
+            </div>
+
+            <div class="card">
+                <h3>Temp. Média</h3>
+                <p class="big">24,1 °C</p>
+                <span>19°C - 29°C</span>
+            </div>
+        </section>
+
+        <!-- Conteúdo principal -->
+        <section class="grid">
+
+            <!-- Gráfico (simulado) -->
+            <div class="chart">
+                <h3>Evolução do Consumo</h3>
+                <div class="fake-chart"></div>
+            </div>
+
+            <!-- Tabela -->
+            <div class="table">
+                <h3>Dados Coletados</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>kwh</th>
+                            <th>Potência</th>
+                            <th>Temp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>24/04 14:00</td>
+                            <td>0,32</td>
+                            <td>287w</td>
+                            <td>24°C</td>
+                        </tr>
+                        <tr>
+                            <td>24/04 13:45</td>
+                            <td>0.28</td>
+                            <td>305</td>
+                            <td>24°C</td>
+                        </tr>
+                        <tr>
+                            <td>24/04 13:30</td>
+                            <td>0.31</td>
+                            <td>299w</td>
+                            <td>23°C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Alertas -->
+        <section class="alerts">
+            <div class="alert red">
+                <strong>Equipamento ligado fora do hórario</strong>
+                <p>Ar-condicionado ligado às 22:15</p>
+            </div>
+
+            <div class="alert orange">
+                <strong>Consumo elevado</strong>
+                <p>Ambiente vazio detectado</p>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+    
 </body>
 </html>
-
